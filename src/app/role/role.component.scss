@@ -8,8 +8,9 @@ table {
 }
 
 .table-heading {
+  text-align: center;
   text-transform: uppercase;
-  background: white;
+  background-color: #dadada;
   font-size: larger;
   font-weight: 400;
   letter-spacing: 8px;
@@ -34,21 +35,18 @@ th {
 }
 
 .table-container {
-  padding: 10px;
-  border-radius: 10px;
   background-color: white;
 }
 
 .filter-bar {
-  background: whitesmoke;
+  background: white;
   box-shadow: inset 0.6px 0.9px 12.9px -3.9px #dddddddd;
-  border-radius: 6px 6px 0 0;
 }
 
 .mat-header-row {
-  background-color: #dadada;
+  background-color: #f1f1f1;
   position: sticky;
-  box-shadow: 0px 0 0 -2px #00000014, 0px 2px 2px 0px #00000024, 0px 1px 5px 0px #00000026;
+  box-shadow: 0px 5px 11px 0px #8c6a8924, 0px 2px 4px 0px #ffa8b826;
   top: 0;
 }
 
