@@ -101,6 +101,11 @@ export class RoleComponent implements OnInit, AfterViewInit {
     });
     this.dataSource = new MatTableDataSource(dateRangeData);
     this.setFilter();
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+
+   
 
   }
   
