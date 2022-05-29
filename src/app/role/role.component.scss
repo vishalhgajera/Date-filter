@@ -1,0 +1,63 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.table-heading {
+  text-transform: uppercase;
+  background: white;
+  font-size: larger;
+  font-weight: 400;
+  letter-spacing: 8px;
+  margin: 0;
+  padding: 10px 25px;
+}
+
+td,
+th {
+  width: 25%;
+}
+
+.date-input {
+  background-color: white;
+  box-shadow: inset 0.6px -0.1px 4.9px -0.9px #b5b5b5;
+  padding: 7px;
+  margin-bottom: 10px;
+}
+
+.filter-button {
+  margin-top: 13px;
+}
+
+.table-container {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.filter-bar {
+  background: whitesmoke;
+  box-shadow: inset 0.6px 0.9px 12.9px -3.9px #dddddddd;
+  border-radius: 6px 6px 0 0;
+}
+
+.mat-header-row {
+  background-color: #dadada;
+  position: sticky;
+  box-shadow: 0px 0 0 -2px #00000014, 0px 2px 2px 0px #00000024, 0px 1px 5px 0px #00000026;
+  top: 0;
+}
+
+@media (max-width: 575.98px) {
+  .date-picker {
+    min-width: 100%;
+  }
+
+  .filter-button {
+    margin-top: 0px;
+  }
+}
