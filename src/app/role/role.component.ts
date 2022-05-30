@@ -47,7 +47,7 @@ const names: string[] = [
 
 export class RoleComponent implements OnInit, AfterViewInit {
 
-  displayedColumns: string[] = ['id', 'name', 'creation_date', 'type'];
+  displayedColumns: string[] = ['id', 'creation_date', 'name', 'type'];
   dataSource: MatTableDataSource<Role>;
 
   @ViewChild(MatPaginator)
