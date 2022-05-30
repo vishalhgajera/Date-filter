@@ -4,16 +4,19 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormControl,FormGroup } from '@angular/forms';
 import {MAT_DATE_LOCALE} from '@angular/material/core';
+
 export interface Role {
   id: string;
   name: string;
   creation_date: Date;
   type: string;
 };
+
 const types: string[] = [
   'Admin',
   'User',
 ];
+
 const names: string[] = [
   'Maia',
   'Asher',
@@ -54,23 +57,24 @@ export class RoleComponent implements OnInit, AfterViewInit {
   paginator!: MatPaginator;
   @ViewChild(MatSort)
   sort!: MatSort;
+
   minDate: Date;
   maxDate: Date;
+
   range = new FormGroup({
     start: new FormControl(),
     end: new FormControl(),
   });
+
   searchData!: string;
   // Create 100 users
   users: Role[] = Array.from({ length: 100 }, (_, k) => this.createRandomData(k + 1));
 
   constructor() {
-
     this.dataSource = new MatTableDataSource(this.users);
 
     this.maxDate = new Date();
     this.minDate = this.minDateFinder();
-  
   }
 
   ngAfterViewInit() {
@@ -134,5 +138,4 @@ export class RoleComponent implements OnInit, AfterViewInit {
     const year = new Date().getFullYear() - 1;
     return new Date(Math.round((Math.random())) + year, Math.random() * month, Math.random() * date);
   }
-
 }
