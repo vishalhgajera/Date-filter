@@ -104,9 +104,6 @@ export class RoleComponent implements OnInit, AfterViewInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
-
-   
-
   }
   
   minDateFinder() {
