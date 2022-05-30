@@ -3,7 +3,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { FormControl,FormGroup } from '@angular/forms';
-import {MAT_DATE_LOCALE} from '@angular/material/core';
 
 export interface Role {
   id: string;
@@ -43,9 +42,6 @@ const names: string[] = [
   selector: 'app-role',
   templateUrl: './role.component.html',
   styleUrls: ['./role.component.scss'],
-  providers:[
-    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
-  ]
 })
 
 export class RoleComponent implements OnInit, AfterViewInit {
@@ -78,15 +74,14 @@ export class RoleComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.dataSource.filterPredicate = function (record,filter) {
-      debugger;
-      return record.id.indexOf(filter)!=-1 || record.name.toLocaleLowerCase().indexOf(filter)!=-1 || record.type.toLocaleLowerCase().indexOf(filter)!=-1 ;
-
-   }
     this.setFilter();
   }
 
   setFilter() {
+    this.dataSource.filterPredicate = function (record,filter) {
+      return record.id.indexOf(filter)!=-1 || record.name.toLocaleLowerCase().indexOf(filter)!=-1 || record.type.toLocaleLowerCase().indexOf(filter)!=-1 ;
+
+   }
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }

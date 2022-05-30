@@ -12,9 +12,6 @@
           <mat-hint class="p-1">DD/MM/YYYY – DD/MM/YYYY</mat-hint>
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-date-range-picker #picker disabled="false"></mat-date-range-picker>
-          
-          <mat-error *ngIf="range.controls['start'].hasError('matStartDateInvalid')">Invalid start date</mat-error>
-          <mat-error *ngIf="range.controls['end'].hasError('matEndDateInvalid')">Invalid end date</mat-error>
         </mat-form-field>
         <div class="filter-button">
           <button mat-raised-button color="accent" class="mt-2 float-end" (click)="dateFilter()">Date Filter</button>

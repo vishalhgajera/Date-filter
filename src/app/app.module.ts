@@ -7,6 +7,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatButtonModule} from '@angular/material/button';
+import {MAT_DATE_LOCALE} from '@angular/material/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +37,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     ReactiveFormsModule,
     MatButtonModule,
   ],
-  providers: [],
+  providers: [ { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
