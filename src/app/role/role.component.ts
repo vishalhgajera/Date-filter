@@ -78,6 +78,11 @@ export class RoleComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    this.dataSource.filterPredicate = function (record,filter) {
+      debugger;
+      return record.id.indexOf(filter)!=-1 || record.name.toLocaleLowerCase().indexOf(filter)!=-1 || record.type.toLocaleLowerCase().indexOf(filter)!=-1 ;
+
+   }
     this.setFilter();
   }
 
